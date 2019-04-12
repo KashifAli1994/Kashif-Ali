@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color: ghostwhite;
+	width:99%;
+	position: center;
+	color:white;
+	text-align: center;
+	font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+.container{
+	position: center;
+	display:grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: auto 1fr auto auto auto;
+	grid-template-areas: 
+		"logo nav"
+		"section1 image"
+		"section2 section2"
+		"section3 section3"
+		"footer footer";
+}
+nav{
+}
+nav ul{
+	color:grey;
+}
+nav li{
+	text-align: right;
+	padding:0px 30px;
+	font-weight:light;
+	font-size: 1.5em;
+	display: inline-block;
+	
+}
+.one{
+	grid-area: nav;
+}
+header{
+}
+h1{
+	color:purple;
+	padding-left:10%;
+	padding-top:20px;
+	padding-bottom: 10px;
+	text-align: left;
+	font-weight:lighter;
+	font-size:1.6em;
+}
+h2{
+	color:crimson;
+	font-weight:bold;
+	font-size:1.4em;
+}
+p{
+	margin: 0% 10px;
+	color: black;
+}
+.tag{
+	grid-area:section1;
+	text-align: left;
+	margin: 0% 10px;
+}
+section{
+	color:black;
+	font-weight:lighter;
+}
+.two{
+	
+	max-width: 200px;
+	max-height: 200px;
+	margin: 0 10px;
+	padding:0% 10px;
+	text-align: left;
+	grid-area:image;
+	grid-gap:10px;
+	display: inline-block;
+}
+.three{
+	padding:5%10px;
+	text-align: left;
+	grid-area:section2;
+	grid-gap:10px;
+}
+.four{
+	margin:5%0px;
+	padding:10% 10px;
+	text-align: left;
+	grid-area:section3;
+}
+footer{
+	padding:20px;
+	grid-area:footer;
+	background-color: black;
+	color:white;
+}
+@media print
+{
+	.container{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	margin-top:.25in;
+	margin-bottom:.5in;
+	margin-left:.25in;
+	margin-right:.25in;
+	}
+	.three .four {
+		font-size:18pt;
+	}
+	h2 h3{
+		font-size:20pt;
+		}
+	h1{
+		font-size:22pt;
+	}
+	footer{
+		font-size:18pt;
+	}
+	}
+	
